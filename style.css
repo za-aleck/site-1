@@ -89,13 +89,11 @@ a{
 	padding: 15px 0;
 	position: relative;
 }
-.header__menu{
-   flex: 1 1 auto;
-}
 .menu{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  flex: 1 1 auto;
   
 }
 .socials{
@@ -103,7 +101,7 @@ a{
 	flex-wrap: wrap;
 }
 
-.header__logo{
+.logo{
 	position: relative;
     opacity: 0.74;
     background-color: #ffffff;
@@ -111,7 +109,7 @@ a{
     height: 40px;
     margin-left: 5px;
 }
-.header__logo img{
+.logo img{
 	position: absolute;
     width: 40px;
     height: 40px;
@@ -310,14 +308,12 @@ color: #f5f5f5;
 	width: 25%;
 	padding: 0 15px;
 	text-align: center;
-}
-.block-col{
-   color: #fff;
+  color: #fff;
 }
 .text_color_text{
    color: #222222;
 }
-.block-col__icon{
+.block-inner__icon{
 	border-radius:50%;
    display: inline-flex;
    align-items: center;
@@ -327,11 +323,11 @@ color: #f5f5f5;
    background-color: #2e85aa;
    margin-bottom: 20px;
 }
-.block-col__icon img{
+.block-inner__icon img{
   width: 34px;
   height: 34px;
 }
-.block-col__title {
+.block-inner__title {
 margin-bottom: 30px;
 }
 .block-title{
@@ -426,20 +422,20 @@ text-transform: uppercase;
 }
 .heading{
     font-size: 30.1px;
-    line-height: 37px;
+    line-height: 1.2;
     color: #222222;
     text-align: center;
 }
 .blog__heading{
 	margin-bottom: 75px;
 }
-.block-col__img{
+.block-inner__img{
 	margin-bottom: 20px;
 }
-.block-col__heading{
+.block-inner__heading{
 	margin-bottom:25px;
 }
-.block-col__img img{
+.block-inner__img img{
 	width: 100%;
 }
 /*cum=======*/
@@ -497,21 +493,19 @@ background: #11749e;
 }
 .phone__text{
     margin-bottom: 65px;
+    max-width: 470px;
 }
 .phone__title{
 	margin-bottom: 40px;
 }
-.text_width{
-	max-width: 470px;
-}
-.text_font_transform{
+.text_style{
 	font-weight: 500;
 	text-transform: uppercase;
+  background:#11749e;
 }
 
-.phone-row__p{
+.phone-row__text{
 	padding: 12px 20px;
-	background:#11749e;
 }
 .phone-row__top{
 	max-width: 370px;
@@ -665,7 +659,7 @@ color: #fff;
 /*footer============*/
 .footer{
 	background: #222222;
-	padding: 50px 0;
+	padding: 40px 0;
 }
 .footer-title{
 font-size: 13px;
@@ -743,10 +737,10 @@ color: #ffffff;
 .blog__heading {
     margin-bottom: 60px;
 }
-.block-col__img {
+.block-inner__img {
     margin-bottom: 10px;
 }
-.block-col__heading {
+.block-inner__heading {
     margin-bottom: 5px;
 }
   /*cum media=======*/
@@ -768,9 +762,6 @@ color: #ffffff;
 .cum__column:not(:last-child){
     margin-bottom: 40px;
 }
-  .cum__img{
-	margin-bottom: 10px;
- }
  /* phone===============*/
 .phone__title {
     margin-bottom: 20px;
@@ -866,10 +857,10 @@ transition: color .5s;
 .agency__block {
     margin-bottom: 20px;
 }
-.block-col__icon {
+.block-inner__icon {
     margin-bottom: 15px;
 }
-.block-col__title {
+.block-inner__title {
     margin-bottom: 10px;
 }
   /*akita=============*/
@@ -913,6 +904,7 @@ transition: color .5s;
 }
   .cum__img{
 	position: static;
+  margin-bottom: 10px;
  }
 /* phone===============*/
 .phone {
@@ -1010,7 +1002,7 @@ transition: color .5s;
 .phone__img {
     width: 100%;
 }
-.phone-row_mb{
+.phone__block{
 	margin-bottom: 50px;
 
 }
