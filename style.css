@@ -661,13 +661,20 @@ color: #fff;
 	background: #222222;
 	padding: 40px 0;
 }
-.footer-title{
+.footer__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.footer__title{
 font-size: 13px;
 line-height: 2.9;
 letter-spacing: 0.02em;
 color: #ffffff;
 }
-
+.footer__logo img{
+  max-width: 100%;
+}
 
 
 /*мобильная версия*/
@@ -948,6 +955,10 @@ transition: color .5s;
 .footer{
 	padding: 30px 0;
 }
+.footer__content{
+  display: block;
+  text-align: center;
+}
 }
  @media screen and (max-width: 480px){
   /*creatives=========*/
@@ -1033,8 +1044,7 @@ transition: color .5s;
 .footer{
 	padding: 20px 0;
 }
-.footer-title{
+.footer__title{
 font-size: 10px;
-text-align: center;
 }
 }
