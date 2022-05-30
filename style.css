@@ -651,7 +651,8 @@ color: #ffffff;
 	padding-left: 18px;
 }*/	
 .block-inner__btn{
- padding: 0 15px; 
+ padding: 0 15px;
+ margin: 0 auto; 
 }
 .btn{
 font-size: 24px;
@@ -1054,16 +1055,12 @@ transition: color .5s;
     margin-bottom: 15px;
 }
 .block-inner__btn{
- display: flex;
- justify-content: center;
- padding: 0 15px; 
  width: 100%; 
 }
 .btn {
     font-size: 18px;
     padding: 14px 0;
     width: 100%;
-    text-align: center;
 }
 .textarea {
     height: 130px;
