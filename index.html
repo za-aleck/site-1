@@ -10,7 +10,7 @@
 </head>
 <body> 
 	<!-- header========= -->
-	<header class="header">
+	<header class="header" id="header">
 		<div class="wrapper">
 			<div class="header__conteiner">
 		
@@ -18,7 +18,7 @@
 				<img src="img/logo.jpg" alt="logo">
 			</a> 
       
-             <ul class="menu">
+             <ul class="menu" id="menu">
              	<li>
              		<a href="#home" class="menu__link">Home</a>
              	</li>
@@ -39,7 +39,7 @@
              	</li>
            </ul>
 
-             <ul class="socials">
+             <ul class="socials">  
              	<li>
              		<a href="" class="socials__link"><i class="fa-brands fa-vk"></i></a>
              	</li>
@@ -60,7 +60,7 @@
 		</div>
 	</header>
 <!-- creatives========= -->
-<section class="creatives" id="home">
+<section class="creatives" id="home" >
 	<div class="wrapper">
 		<div class="creatives__inner">
 			<div class="creatives__title">Creatives</div>	
@@ -366,12 +366,14 @@
 				<div class="block-inner__form">
 				<input class="block-inner__input" placeholder="Phone" type="phone"name="phone">	
 				</div>
+        <div class="block-inner__text">
+          <textarea class="textarea" placeholder="Message"></textarea>
+        </div>
+        <div class="block-inner__btn">
+        <button href="##" class="btn">Submit</button> 
+        </div>
 			</form>
-			<textarea class="project__textarea textarea" placeholder="Message"></textarea>
-			<div class="project__btn">
-			<a href="##" class="btn">Submit</a> 
 			</div>
-		</div>
 </section>
 <!-- map=============== -->
 <section class="map" id="wer">	
@@ -383,7 +385,7 @@
  <div class="footer__content">
 	<div class="footer__title">
 	© 2022 PSDfreebies.com – All Right Reserved
-	</div>
+	</div> 
   <div class="footer__logo">
   <img src="img/footer_logo.png" alt="">
   </div>
@@ -392,30 +394,6 @@
 </section>
 
 <script src="jquery/jquery-3.6.0.min.js"></script>
-    <script>
-    $('.burger').click(function() {
-        $('.burger').toggleClass('active');
-        $('.menu').toggleClass('active');
-
-        // скрол страницы пропадает
-        $('body').toggleClass('lock');
- }); 
-       
-
-     // прокрутка к странице
-    $("body").on('click', '[href*="#"]', function(e){
-  var fixed_offset = 70;
-  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
-  e.preventDefault();
-
-
-
-  // убирает классы чтобы был скролл
-  $('.menu').removeClass('active');
-  $('body').removeClass('lock');
-  $('.burger').removeClass('active');
-
-});
-    </script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

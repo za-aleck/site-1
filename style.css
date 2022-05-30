@@ -1,5 +1,5 @@
  @font-face {
-     font-family:Gotham;  
+     font-family:Gotham;   
      src: url('font/GothamPro.woff2'),
          url('font/GothamPro.woff'); 
      font-style: normal;
@@ -20,7 +20,7 @@
      font-weight: 700;
  }
     @font-face {
-     font-family:MyriadPro;  
+     font-family:MyriadPro;    
      src: url('font/MyriadPro-Regular.woff2'),
          url('font/MyriadPro-Regular.woff'); 
      font-style: normal;
@@ -68,13 +68,22 @@ a{
 /*header=========*/
 .header{
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	border-bottom:solid 1px rgb(255,255,255,38%);
-	background: #222222;
+	border-bottom:solid 1px rgb(255,255,255, 38%);
 	z-index: 10000;
+}
+.header.fixed{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom:solid 1px rgb(255,255,255, 38%);
+  background: #222222;
+  z-index: 10000;
 }
 .wrapper{
 	width: 100%;
@@ -126,6 +135,7 @@ a{
    font-weight: 400;
    color: #ffffff;
    position: relative;
+   transition: color .5s;
 }
 .menu__link:before{ 
 content: '';
@@ -138,8 +148,13 @@ left: 0;
 transition:transform .5s;
 transform: scale(0);
 }
-.menu__link:hover:before{
+.menu__link:hover:before,
+.menu__link.active:before{
   transform: scale(1);
+}
+.menu__link.active,
+.menu__link:hover{
+  color: #11749e;
 }
 .socials li{
 padding-right: 20px;
@@ -588,9 +603,7 @@ text-transform: uppercase;
 .project__block{
 	margin-bottom: 70px;
 }
-.project__block-inner{
-	margin-bottom: 40px;
-}
+
 /*когда пишешь*/
 .block-inner__input{
 font-family: Gotham;	
@@ -603,9 +616,15 @@ color: #ffffff;
 font-size: 15px;
 font-weight: 400;
 }
-.block-inner__form{
+.block-inner__form{ 
 	width:33.33333%;
 	padding: 0 15px;
+  margin-bottom: 30px;
+}
+.block-inner__text{
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 40px;
 }
 ::placeholder{
 letter-spacing: 0.02em;
@@ -631,12 +650,8 @@ color: #ffffff;
 /*.textarea::placeholder{
 	padding-left: 18px;
 }*/	
-.project__textarea{
-	margin-bottom: 40px;
-}
-.project__btn{
- display: flex;
- justify-content: center;
+.block-inner__btn{
+ padding: 0 15px; 
 }
 .btn{
 font-size: 24px;
@@ -646,6 +661,8 @@ text-transform: uppercase;
 background-color: #11749e;
 padding: 20px 60px;
 color: #fff;
+border: none;
+cursor: pointer;
 }
 .btn:hover{
 	opacity: .7;
@@ -684,7 +701,7 @@ color: #ffffff;
     margin-right: 13px;
 }
 .menu li:last-child {
-    margin-right: 20px;
+    margin-right: 25px;
 }
 .socials li {
     padding-right: 12px;
@@ -938,13 +955,13 @@ transition: color .5s;
 	width:100%;
 	margin-bottom: 15px;
 }
-.project__block-inner {
-    margin-bottom: 20px;
+.block-inner__form:nth-child(3){
+  margin-bottom: 25px;
 }
 .project__block {
     margin-bottom: 30px;
 }
-.project__textarea {
+.block-inner__text {
     margin-bottom: 25px;
 }
 .btn {
@@ -1033,12 +1050,23 @@ transition: color .5s;
 	padding:15px 0 40px;
 
 }
-.project__block-inner {
-    margin-bottom: 10px;
+.block-inner__text {
+    margin-bottom: 15px;
+}
+.block-inner__btn{
+ display: flex;
+ justify-content: center;
+ padding: 0 15px; 
+ width: 100%; 
 }
 .btn {
     font-size: 18px;
-    padding: 14px 42px;
+    padding: 14px 0;
+    width: 100%;
+    text-align: center;
+}
+.textarea {
+    height: 130px;
 }
 /*footer============*/
 .footer{
